@@ -13,10 +13,8 @@ export class AppComponent {
   myData: Array<any>;
 
     constructor(private http:Http) {
-
-      this.http.get('https://jsonplaceholder.typicode.com/photos')
+      this.http.get('http://api.icndb.com/jokes/random/20')
         .map(response => response.json())
         .subscribe(res => this.myData = res);
-
     }
 }
